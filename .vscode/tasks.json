@@ -1,0 +1,23 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build zen app",
+      "command": "dotnet",
+      "type": "process",
+      "args": [
+        "build",
+        "${workspaceFolder}/Zen.csproj",
+        "/property:GenerateFullPaths=true",
+        "/consoleloggerparameters:NoSummary",
+        "/p:OutputPath=/app"
+      ],
+      "problemMatcher": "$msCompile",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "detail": "Builds Zen project."
+    }
+  ]
+}

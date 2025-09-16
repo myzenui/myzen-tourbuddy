@@ -1,0 +1,16 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Zen Start",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build zen app",
+      "program": "Zen.Blazor.Server.dll",
+      "args": [],
+      "stopAtEntry": false,
+      "console": "integratedTerminal",
+      "cwd": "/app"
+    }
+  ]
+}

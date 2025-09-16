@@ -1,0 +1,35 @@
+{
+    "image": "myzen/devcontainer:19",
+    "postStartCommand": "/bin/bash /start.sh",
+    "forwardPorts": [1433],
+    "containerEnv": {
+        "ACCEPT_EULA": "Y",
+        "MSSQL_PID": "Express",
+        "MSSQL_SA_PASSWORD": "ZenPassword123!"
+    },
+    "mounts": ["type=volume,source=dev-mssql-data,target=/var/opt/mssql"],
+    "features": {
+        "ghcr.io/joshuanianji/devcontainer-features/gcloud-cli-persistence:1": {}
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-dotnettools.csharp"
+            ],
+            "settings": {
+                "files.exclude": {
+                    "**/.classpath": true,
+                    "**/.project": true,
+                    "**/.settings": true,
+                    "**/.factorypath": true,
+                    "**/.*": true,
+                    "**/bin": true,
+                    "**/obj": true,
+                    "nuget.config": true,
+                    "dev.sln": true,
+                    "global.json": true,
+                }
+            }
+        }
+    }
+}
